@@ -194,7 +194,7 @@ function ServiceCard({ service, animClass }) {
   return (
     <div className={`_sv-service-card border border-gray-100 dark:border-white/8 bg-white dark:bg-[#0d1f35] flex flex-col ${animClass}`}>
 
-      <div className="p-5 border-b border-gray-50 dark:border-white/5">
+      <div className="p-4 sm:p-5 border-b border-gray-50 dark:border-white/5">
         <div className="flex items-start justify-between mb-3.5">
           <div className="w-10 h-10 flex items-center justify-center border"
             style={{ background:`${color}14`, borderColor:`${color}30`, color }}>
@@ -212,7 +212,7 @@ function ServiceCard({ service, animClass }) {
           className="text-gray-500 dark:text-white/45">{desc}</p>
       </div>
 
-      <div className="p-5 flex-1">
+      <div className="p-4 sm:p-5 flex-1">
         <ul className="space-y-2">
           {highlights.map(h => (
             <li key={h} style={{ ...SANS, fontSize:'12px' }} className="flex items-start gap-2 text-gray-600 dark:text-white/55">
@@ -225,7 +225,7 @@ function ServiceCard({ service, animClass }) {
 
       <div className="border-t border-gray-50 dark:border-white/5">
         <button onClick={() => setOpen(v => !v)}
-          className="_sv-acc-btn w-full flex items-center justify-between px-5 py-3">
+          className="_sv-acc-btn w-full flex items-center justify-between px-4 sm:px-5 py-3">
           <span style={{ ...SANS, fontSize:'10.5px', fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase' }}
             className="text-gray-400 dark:text-white/30">Full stack</span>
           {open
@@ -234,7 +234,7 @@ function ServiceCard({ service, animClass }) {
         </button>
 
         {open && (
-          <div className="_sv-acc-body border-t border-gray-50 dark:border-white/5 p-4 space-y-3">
+          <div className="_sv-acc-body border-t border-gray-50 dark:border-white/5 p-3 sm:p-4 space-y-3">
             {stacks.map(([groupLabel, pills]) => (
               <div key={groupLabel}>
                 <p style={{ ...SANS, fontSize:'8.5px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase', marginBottom:'5px' }}
@@ -251,7 +251,7 @@ function ServiceCard({ service, animClass }) {
       </div>
 
       <a href="#contact"
-        style={{ ...SANS, fontSize:'12px', fontWeight:700, color, display:'flex', alignItems:'center', gap:'5px', padding:'12px 20px', borderTop:'1px solid' }}
+        style={{ ...SANS, fontSize:'12px', fontWeight:700, color, display:'flex', alignItems:'center', gap:'5px', padding:'12px 16px', borderTop:'1px solid' }}
         className="border-gray-100 dark:border-white/8 hover:gap-2.5 transition-all duration-200">
         Hire me for this <ArrowRight size={12} />
       </a>
@@ -283,8 +283,8 @@ const Services = () => {
     <section id="services" ref={ref} className="w-full bg-white dark:bg-[#0a1628] scroll-mt-20">
 
       <div className="border-b border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35]">
-        <div className="max-w-[82rem] mx-auto px-6 lg:px-6 py-10 lg:py-14">
-          <div className={`flex flex-col lg:flex-row lg:items-end gap-8 ${an(1)}`}>
+        <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-6 py-8 sm:py-10 lg:py-14">
+          <div className={`flex flex-col lg:flex-row lg:items-end gap-6 sm:gap-8 ${an(1)}`}>
             <div className="flex-1">
               <div className="flex items-center gap-2.5 mb-3">
                 <span className="inline-block w-8 h-[2px]" style={{ background:'linear-gradient(90deg,#1f6fb2,#FF7A00)' }} />
@@ -292,7 +292,7 @@ const Services = () => {
                   What I Offer
                 </span>
               </div>
-              <h2 style={{ ...SERIF, fontSize:'clamp(30px,4.5vw,50px)', lineHeight:1.05 }}
+              <h2 style={{ ...SERIF, fontSize:'clamp(26px,4.5vw,50px)', lineHeight:1.05 }}
                 className="text-[#1f3a5f] dark:text-white">
                 Enterprise-grade engineering<br />
                 <em className="not-italic" style={{ background:'linear-gradient(135deg,#1f6fb2,#0ea5e9)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
@@ -305,7 +305,7 @@ const Services = () => {
                 className="text-gray-500 dark:text-white/50">
                 From pixel-perfect frontends to hardened production APIs I cover the full stack. Six specialization areas, one engineer.
               </p>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-2">
                 {[
                   ['8+','Tech domains'],
                   ['50+','Tools & libraries'],
@@ -323,19 +323,19 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="max-w-[82rem] mx-auto px-6 lg:px-6 py-12 lg:py-16 space-y-16">
+      <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-6 py-10 sm:py-12 lg:py-16 space-y-12 sm:space-y-16">
 
         <div>
-          <div className={`flex items-center gap-3 mb-6 ${an(2)}`}>
+          <div className={`flex flex-wrap items-center gap-3 mb-6 ${an(2)}`}>
             <p style={{ ...SANS, fontSize:'9.5px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase' }}
               className="text-gray-400 dark:text-white/30">Specialisations</p>
             <span className="flex-1 h-px bg-gray-100 dark:bg-white/8" />
-            <span style={{ ...SANS, fontSize:'10px', fontWeight:600 }} className="text-gray-400 dark:text-white/25">
+            <span style={{ ...SANS, fontSize:'10px', fontWeight:600 }} className="text-gray-400 dark:text-white/25 hidden sm:inline">
               Click "Full stack" to expand each service
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {SERVICES.map((svc, i) => (
               <ServiceCard key={svc.label} service={svc} animClass={an(i + 3)} />
             ))}
@@ -343,12 +343,12 @@ const Services = () => {
         </div>
 
         <div className={`border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] ${an(9)}`}>
-          <div className="px-6 py-4 border-b border-gray-100 dark:border-white/8 flex items-center justify-between">
+          <div className="px-4 sm:px-6 py-4 border-b border-gray-100 dark:border-white/8 flex items-center justify-between">
             <p style={{ ...SANS, fontSize:'9.5px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase' }}
               className="text-gray-400 dark:text-white/30">Complete tech inventory</p>
             <span className="_sv-tag-pill">50+ tools</span>
           </div>
-          <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {[
               { label:'Frontend', items:['Next.js','React','TypeScript','Tailwind CSS','shadcn/ui','Framer Motion','GSAP','Three.js','Zustand','TanStack Query','React Hook Form','Zod'] },
               { label:'Backend',  items:['Node.js','Express.js','Prisma','PostgreSQL','MongoDB','Redis','JWT','OAuth2','NextAuth','Helmet','BullMQ','Stripe'] },
@@ -369,13 +369,13 @@ const Services = () => {
         </div>
 
         <div className={`border border-gray-100 dark:border-white/8 bg-white dark:bg-[#0a1628] ${an(10)}`}>
-          <div className="px-6 py-4 border-b border-gray-100 dark:border-white/8">
+          <div className="px-4 sm:px-6 py-4 border-b border-gray-100 dark:border-white/8">
             <p style={{ ...SANS, fontSize:'9.5px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase' }}
               className="text-gray-400 dark:text-white/30">My process</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-gray-100 dark:divide-white/8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y lg:divide-y-0 lg:divide-x divide-gray-100 dark:divide-white/8">
             {PROCESS.map(({ step, title, desc }) => (
-              <div key={step} className="px-6 py-6 flex flex-col gap-2">
+              <div key={step} className="px-4 sm:px-6 py-5 sm:py-6 flex flex-col gap-2">
                 <span style={{ ...SERIF, fontSize:'30px', color:'#1f6fb2', lineHeight:1, opacity:.25 }}>{step}</span>
                 <h4 style={{ ...SANS, fontSize:'14px', fontWeight:700, letterSpacing:'-0.01em' }}
                   className="text-[#1f3a5f] dark:text-white">{title}</h4>
@@ -386,23 +386,23 @@ const Services = () => {
           </div>
         </div>
 
-        <div className={`flex flex-col sm:flex-row items-center justify-between gap-5 border border-gray-100 dark:border-white/8 px-7 py-6 bg-gradient-to-r from-[#eaf6ff] to-white dark:from-[#1f3a5f]/25 dark:to-transparent ${an(10)}`}>
+        <div className={`flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 border border-gray-100 dark:border-white/8 px-4 sm:px-7 py-6 bg-gradient-to-r from-[#eaf6ff] to-white dark:from-[#1f3a5f]/25 dark:to-transparent ${an(10)}`}>
           <div>
-            <h4 style={{ ...SERIF, fontSize:'20px' }} className="text-[#1f3a5f] dark:text-white mb-1">
+            <h4 style={{ ...SERIF, fontSize:'clamp(17px,3vw,20px)' }} className="text-[#1f3a5f] dark:text-white mb-1">
               Ready to build something serious?
             </h4>
             <p style={{ ...SANS, fontSize:'13.5px' }} className="text-gray-500 dark:text-white/45">
-              Let's talk about your project I'm open to freelance, contract, and full-time roles.
+              Let's talk about your project — I'm open to freelance, contract, and full-time roles.
             </p>
           </div>
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
             <a href="#work"
               style={{ ...SANS, fontSize:'13px', fontWeight:600, padding:'10px 20px', display:'inline-flex', alignItems:'center', gap:'6px' }}
               className="border border-[#1f3a5f] dark:border-white/20 text-[#1f3a5f] dark:text-white/70 hover:border-[#1f6fb2] hover:text-[#1f6fb2] dark:hover:text-white transition-colors">
               See my work
             </a>
             <a href="#contact"
-              style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'10px 24px', color:'white', background:'linear-gradient(135deg,#7A2E00,#C45500 50%,#FF7A00)', boxShadow:'0 4px 16px rgba(196,85,0,0.26)', display:'inline-flex', alignItems:'center', gap:'8px' }}
+              style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'10px 20px', color:'white', background:'linear-gradient(135deg,#7A2E00,#C45500 50%,#FF7A00)', boxShadow:'0 4px 16px rgba(196,85,0,0.26)', display:'inline-flex', alignItems:'center', gap:'8px' }}
               className="hover:shadow-[0_6px_22px_rgba(196,85,0,0.40)] transition-shadow duration-200">
               Start a conversation <ArrowRight size={14} />
             </a>

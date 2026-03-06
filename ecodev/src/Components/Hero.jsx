@@ -50,11 +50,11 @@ const Hero = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1f6fb2]/7 dark:bg-[#1f6fb2]/12 blur-[130px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-[#C45500]/5 dark:bg-[#C45500]/9 blur-[110px] rounded-full pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-[82rem] mx-auto px-4 sm:px-6 pt-32 pb-12">
+      <div className="relative z-10 w-full max-w-[82rem] mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           <div>
-            <div className="_h-fade-up flex flex-wrap items-center gap-2 mb-5" style={{ animationDelay: '0ms' }}>
+            <div className="_h-fade-up flex flex-wrap items-center gap-2 mb-4 sm:mb-5" style={{ animationDelay: '0ms' }}>
               <div className="inline-flex items-center gap-2 border border-[#1f6fb2]/25 bg-[#f0f7ff] dark:bg-[#1f6fb2]/10 dark:border-[#1f6fb2]/30 px-3 py-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#1f6fb2] animate-pulse" />
                 <span className="text-[10.5px] font-bold text-[#1f6fb2] uppercase tracking-[0.18em]">Open to work</span>
@@ -65,14 +65,14 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="_h-fade-up flex items-center gap-2 mb-3" style={{ animationDelay: '60ms' }}>
+            <div className="_h-fade-up flex items-center gap-2 mb-2 sm:mb-3" style={{ animationDelay: '60ms' }}>
               <span className="text-[15px] font-semibold text-gray-500 dark:text-white/45">Hi there</span>
               <img src={hand} alt="" className="w-5" />
             </div>
 
             <h1
-              className="_h-fade-up font-serif leading-[1.08] text-[#1f3a5f] dark:text-white mb-5"
-              style={{ fontSize: 'clamp(36px, 4vw, 56px)', animationDelay: '120ms' }}
+              className="_h-fade-up font-serif leading-[1.08] text-[#1f3a5f] dark:text-white mb-4 sm:mb-5"
+              style={{ fontSize: 'clamp(32px, 4vw, 56px)', animationDelay: '120ms' }}
             >
               I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1f6fb2] to-[#3a9bd5]">
@@ -81,37 +81,37 @@ const Hero = () => {
               <br />Fullstack Engineer.
             </h1>
 
-            <p className="_h-fade-up text-[15.5px] text-gray-600 dark:text-white/55 leading-[1.8] max-w-[500px] mb-8"
+            <p className="_h-fade-up text-[14.5px] sm:text-[15.5px] text-gray-600 dark:text-white/55 leading-[1.8] max-w-[500px] mb-6 sm:mb-8"
               style={{ animationDelay: '190ms' }}>
               3 years building web and mobile applications from pixel-precise frontends to
               scalable Node.js backends. Full JavaScript / TypeScript stack, shipping products
               that are fast, accessible, and production-ready.
             </p>
 
-            <div className="_h-fade-up flex flex-wrap gap-3 mb-10" style={{ animationDelay: '260ms' }}>
+            <div className="_h-fade-up flex flex-wrap gap-3 mb-7 sm:mb-10" style={{ animationDelay: '260ms' }}>
               <a href="#contact"
-                className="inline-flex items-center gap-2.5 px-8 py-2.5 text-[13.5px] font-bold text-white bg-gradient-to-br from-[#7A2E00] via-[#C45500] to-[#FF7A00] hover:from-[#8F3600] hover:via-[#D46000] hover:to-[#FF8C1A] ring-1 ring-inset ring-white/20 transition-all duration-200 shadow-[0_4px_18px_rgba(196,85,0,0.3)]">
+                className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-2.5 text-[13.5px] font-bold text-white bg-gradient-to-br from-[#7A2E00] via-[#C45500] to-[#FF7A00] hover:from-[#8F3600] hover:via-[#D46000] hover:to-[#FF8C1A] ring-1 ring-inset ring-white/20 transition-all duration-200 shadow-[0_4px_18px_rgba(196,85,0,0.3)]">
                 Hire me <img src={rightArrow} alt="" className="w-3.5" />
               </a>
               <a href={resume} download
-                className="inline-flex items-center gap-2.5 px-8 py-2.5 text-[13.5px] font-semibold text-[#1f3a5f] dark:text-white/80 border border-[#d1e3f5] dark:border-white/20 bg-white dark:bg-white/[0.04] hover:border-[#1f6fb2] hover:text-[#1f6fb2] dark:hover:text-white dark:hover:bg-white/10 transition-all duration-200">
+                className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-2.5 text-[13.5px] font-semibold text-[#1f3a5f] dark:text-white/80 border border-[#d1e3f5] dark:border-white/20 bg-white dark:bg-white/[0.04] hover:border-[#1f6fb2] hover:text-[#1f6fb2] dark:hover:text-white dark:hover:bg-white/10 transition-all duration-200">
                 Download CV <img src={download} alt="" className="w-3.5 animate-bounce" />
               </a>
             </div>
 
-            <div className="_h-fade-up flex flex-wrap gap-2" style={{ animationDelay: '320ms' }}>
+            <div className="_h-fade-up flex flex-wrap gap-1.5 sm:gap-2" style={{ animationDelay: '320ms' }}>
               {['React','Next.js','Node.js','Express','React Native','PostgreSQL','MongoDB','Javascript','TypeScript'].map(t => (
                 <span key={t}
-                  className="text-[11.5px] font-semibold text-[#1f3a5f] dark:text-white/70 border border-[#dce8f5] dark:border-white/10 bg-[#f8fafd] dark:bg-white/[0.04] px-2.5 py-1 hover:border-[#1f6fb2] hover:text-[#1f6fb2] transition-colors cursor-default">
+                  className="text-[11px] sm:text-[11.5px] font-semibold text-[#1f3a5f] dark:text-white/70 border border-[#dce8f5] dark:border-white/10 bg-[#f8fafd] dark:bg-white/[0.04] px-2 sm:px-2.5 py-1 hover:border-[#1f6fb2] hover:text-[#1f6fb2] transition-colors cursor-default">
                   {t}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="_h-scale-in flex flex-col gap-5 items-center lg:items-end" style={{ animationDelay: '80ms' }}>
+          <div className="_h-scale-in flex flex-col gap-4 sm:gap-5 items-center lg:items-end mt-8 lg:mt-0" style={{ animationDelay: '80ms' }}>
 
-            <div className="relative w-full max-w-[520px]">
+            <div className="relative w-full max-w-[420px] sm:max-w-[520px]">
               <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-[#1f6fb2] z-10" />
               <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-[#C45500] z-10" />
               <div className="_h-ring absolute inset-0 border-2 border-[#1f6fb2]/30 pointer-events-none z-10" />
@@ -135,11 +135,11 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="w-full max-w-[520px] grid grid-cols-4 border border-[#e2ecf7] dark:border-white/10 divide-x divide-[#e2ecf7] dark:divide-white/10 bg-white dark:bg-white/[0.03] shadow-[0_2px_16px_rgba(31,111,178,0.07)]">
+            <div className="w-full max-w-[420px] sm:max-w-[520px] grid grid-cols-4 border border-[#e2ecf7] dark:border-white/10 divide-x divide-[#e2ecf7] dark:divide-white/10 bg-white dark:bg-white/[0.03] shadow-[0_2px_16px_rgba(31,111,178,0.07)]">
               {STATS.map(({ value, label }) => (
-                <div key={label} className="py-4 text-center">
-                  <p className="text-[22px] font-black text-[#1f3a5f] dark:text-white leading-none">{value}</p>
-                  <p className="text-[9px] font-bold text-gray-400 dark:text-white/30 uppercase tracking-[0.1em] mt-1.5">{label}</p>
+                <div key={label} className="py-3 sm:py-4 text-center">
+                  <p className="text-[18px] sm:text-[22px] font-black text-[#1f3a5f] dark:text-white leading-none">{value}</p>
+                  <p className="text-[8px] sm:text-[9px] font-bold text-gray-400 dark:text-white/30 uppercase tracking-[0.1em] mt-1 sm:mt-1.5">{label}</p>
                 </div>
               ))}
             </div>

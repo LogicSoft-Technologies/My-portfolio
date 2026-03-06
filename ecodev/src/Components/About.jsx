@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { ArrowRight, ExternalLink, Code2, GraduationCap, Layers, Briefcase, Star } from 'lucide-react'
+import { ArrowRight, ExternalLink, GraduationCap, Briefcase, Star } from 'lucide-react'
 import userImg from '../assets/user-img.png'
 import vscode  from '../assets/vscode.png'
 import firebase from '../assets/firebase.png'
@@ -118,24 +118,24 @@ const About = () => {
     <section id="about" ref={ref} className="w-full bg-white dark:bg-[#0a1628] scroll-mt-20">
 
       <div className="border-b border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35]">
-        <div className="max-w-[82rem] mx-auto px-6 lg:px-6 py-10 lg:py-12 flex flex-col lg:flex-row lg:items-end gap-6">
+        <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-6 py-8 sm:py-10 lg:py-12 flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-6">
           <div className="flex-1">
             <div className="flex items-center gap-2.5 mb-3">
               <span className="inline-block w-8 h-[2px]" style={{ background:'linear-gradient(90deg,#1f6fb2,#FF7A00)' }} />
               <span style={{ ...SANS, fontSize:'11px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase', color:'#1f6fb2' }}>About Me</span>
             </div>
-            <h2 style={{ ...SERIF, fontSize:'clamp(28px,4vw,44px)', lineHeight:1.1 }} className="text-[#1f3a5f] dark:text-white">
+            <h2 style={{ ...SERIF, fontSize:'clamp(26px,4vw,44px)', lineHeight:1.1 }} className="text-[#1f3a5f] dark:text-white">
               The engineer behind<br />
               <em className="not-italic" style={{ background:'linear-gradient(135deg,#1f6fb2,#0ea5e9)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>the code</em>
             </h2>
           </div>
           <p style={{ ...SANS, fontSize:'14px', lineHeight:1.75, maxWidth:'520px' }} className="text-gray-500 dark:text-white/50 lg:text-right">
-            I build full-stack web and mobile products from database schema to <br /> pixel-perfect UI with TypeScript, React, Node.js, and the tools <br /> that ship fast and scale further.
+            I build full-stack web and mobile products from database schema to pixel-perfect UI with TypeScript, React, Node.js, and the tools that ship fast and scale further.
           </p>
         </div>
       </div>
 
-      <div className="max-w-[82rem] mx-auto px-6 lg:px-12 py-12 lg:py-16">
+      <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-12 py-10 sm:py-12 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
           <div className={visible ? '_ab-img' : 'opacity-0'}>
@@ -157,9 +157,9 @@ const About = () => {
 
             <div className="mt-4 grid grid-cols-4 border border-gray-100 dark:border-white/8 divide-x divide-gray-100 dark:divide-white/8 bg-[#f9fafb] dark:bg-[#0d1f35]">
               {STATS.map(({ value, label }) => (
-                <div key={label} className="flex flex-col items-center py-4 px-2">
-                  <span style={{ ...SERIF, fontSize:'22px', color:'#1f6fb2', lineHeight:1 }}>{value}</span>
-                  <span style={{ ...SANS, fontSize:'9px', fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase', marginTop:'4px' }}
+                <div key={label} className="flex flex-col items-center py-3 sm:py-4 px-1 sm:px-2">
+                  <span style={{ ...SERIF, fontSize:'20px', color:'#1f6fb2', lineHeight:1 }}>{value}</span>
+                  <span style={{ ...SANS, fontSize:'8px', fontWeight:600, letterSpacing:'0.10em', textTransform:'uppercase', marginTop:'4px' }}
                     className="text-gray-400 dark:text-white/30 text-center">{label}</span>
                 </div>
               ))}
@@ -167,14 +167,14 @@ const About = () => {
 
             <div className={`mt-4 grid gap-3 ${an(2)}`}>
               {CARDS.map(({ icon, label, value }) => (
-                <div key={label} className="_ab-card border border-gray-100 dark:border-white/8 bg-white dark:bg-[#0d1f35] p-4 cursor-default">
+                <div key={label} className="_ab-card border border-gray-100 dark:border-white/8 bg-white dark:bg-[#0d1f35] p-3.5 sm:p-4 cursor-default">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 shrink-0 flex items-center justify-center bg-[#eaf6ff] dark:bg-[#1f3a5f]/50 border border-[#bfdbfe]/60 dark:border-[#1f6fb2]/20">
                       {icon}
                     </div>
                     <div>
                       <p style={{ ...SANS, fontSize:'9px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'#1f6fb2', marginBottom:'3px' }}>{label}</p>
-                      <p style={{ ...SANS, fontSize:'12.5px', lineHeight:1.55 }} className="text-gray-600 dark:text-white/65">{value}</p>
+                      <p style={{ ...SANS, fontSize:'12px', lineHeight:1.55 }} className="text-gray-600 dark:text-white/65">{value}</p>
                     </div>
                   </div>
                 </div>
@@ -186,9 +186,9 @@ const About = () => {
                 <p style={{ ...SANS, fontSize:'9px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase' }} className="text-gray-400 dark:text-white/30">Daily tools</p>
                 <span className="flex-1 h-px bg-gray-100 dark:bg-white/8" />
               </div>
-              <div className="flex items-center gap-3">
+              <div className="grid grid-cols-4 gap-2">
                 {TOOLS.map(({ src, name }) => (
-                  <div key={name} className="_ab-tool flex flex-col items-center gap-1.5 p-3 border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] cursor-default">
+                  <div key={name} className="_ab-tool flex flex-col items-center gap-1.5 p-2.5 sm:p-3 border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] cursor-default">
                     <img src={src} alt={name} className="w-6 h-6 object-contain" />
                     <span style={{ ...SANS, fontSize:'8.5px', fontWeight:600, letterSpacing:'0.06em' }} className="text-gray-400 dark:text-white/30">{name}</span>
                   </div>
@@ -205,7 +205,7 @@ const About = () => {
                 <span style={{ ...SANS, fontSize:'10px', fontWeight:600 }} className="text-gray-400 dark:text-white/25">50+ tools</span>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {STACK_GROUPS.map(({ label, color, items }) => (
                   <div key={label} className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35]">
                     <div className="px-4 py-2.5 border-b border-gray-100 dark:border-white/8 flex items-center gap-2">
@@ -222,11 +222,11 @@ const About = () => {
               </div>
             </div>
 
-            <div className={`my-7 h-px bg-gray-100 dark:bg-white/8 ${an(4)}`} />
+            <div className={`my-6 sm:my-7 h-px bg-gray-100 dark:bg-white/8 ${an(4)}`} />
 
             <div className={an(4)}>
               <p style={{ ...SANS, fontSize:'9.5px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase', marginBottom:'14px' }} className="text-gray-400 dark:text-white/30">What I build</p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                 {[
                   { label:'SaaS Platforms',      desc:'Multi-tenant, subscription billing, user management' },
                   { label:'E-commerce Apps',      desc:'Cart, checkout, payments, inventory, admin panels' },
@@ -235,7 +235,7 @@ const About = () => {
                   { label:'Company Websites',     desc:'Fast, animated, SEO-optimised marketing sites' },
                   { label:'REST APIs & Backends', desc:'Scalable Node.js APIs with auth & caching' },
                 ].map(({ label, desc }) => (
-                  <div key={label} className="p-3.5 border border-gray-100 dark:border-white/8 bg-white dark:bg-[#0d1f35]">
+                  <div key={label} className="p-3 sm:p-3.5 border border-gray-100 dark:border-white/8 bg-white dark:bg-[#0d1f35]">
                     <p style={{ ...SANS, fontSize:'12px', fontWeight:700, marginBottom:'4px' }} className="text-[#1f3a5f] dark:text-white">{label}</p>
                     <p style={{ ...SANS, fontSize:'11px', lineHeight:1.55 }} className="text-gray-500 dark:text-white/40">{desc}</p>
                   </div>
@@ -243,16 +243,16 @@ const About = () => {
               </div>
             </div>
 
-            <div className={`my-7 h-px bg-gray-100 dark:bg-white/8 ${an(5)}`} />
+            <div className={`my-6 sm:my-7 h-px bg-gray-100 dark:bg-white/8 ${an(5)}`} />
 
             <div className={`flex flex-wrap items-center gap-3 ${an(5)}`}>
               <a href="#contact"
-                style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'10px 24px', color:'white', background:'linear-gradient(135deg,#7A2E00,#C45500 50%,#FF7A00)', boxShadow:'0 4px 16px rgba(196,85,0,0.26)', display:'inline-flex', alignItems:'center', gap:'8px' }}
+                style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'10px 20px', color:'white', background:'linear-gradient(135deg,#7A2E00,#C45500 50%,#FF7A00)', boxShadow:'0 4px 16px rgba(196,85,0,0.26)', display:'inline-flex', alignItems:'center', gap:'8px' }}
                 className="hover:shadow-[0_6px_22px_rgba(196,85,0,0.40)] transition-shadow duration-200">
                 Hire me <ArrowRight size={14} />
               </a>
               <a href="#work"
-                style={{ ...SANS, fontSize:'13px', fontWeight:600, padding:'10px 20px', display:'inline-flex', alignItems:'center', gap:'6px' }}
+                style={{ ...SANS, fontSize:'13px', fontWeight:600, padding:'10px 18px', display:'inline-flex', alignItems:'center', gap:'6px' }}
                 className="border border-[#1f3a5f] dark:border-white/20 text-[#1f3a5f] dark:text-white/80 hover:border-[#1f6fb2] hover:text-[#1f6fb2] dark:hover:text-white transition-colors">
                 View projects <ExternalLink size={13} />
               </a>

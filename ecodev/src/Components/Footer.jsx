@@ -67,9 +67,9 @@ const Footer = () => {
     <footer className="w-full bg-white dark:bg-[#0a1628]">
 
       <div style={{ background:'linear-gradient(135deg,#1f3a5f 0%,#1f6fb2 100%)' }}>
-        <div className="max-w-[82rem] mx-auto px-6 lg:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-5">
+        <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-6 py-7 sm:py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
           <div>
-            <h3 style={{ ...SERIF, fontSize:'22px', color:'white', lineHeight:1.2, marginBottom:'4px' }}>
+            <h3 style={{ ...SERIF, fontSize:'clamp(18px,3vw,22px)', color:'white', lineHeight:1.2, marginBottom:'4px' }}>
               Ready to start your next project?
             </h3>
             <p style={{ ...SANS, fontSize:'13.5px', color:'rgba(255,255,255,.6)' }}>
@@ -77,7 +77,7 @@ const Footer = () => {
             </p>
           </div>
           <a href="#contact"
-            style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'11px 26px', background:'linear-gradient(135deg,#7A2E00,#C45500 50%,#FF7A00)', boxShadow:'0 4px 16px rgba(196,85,0,0.35)', color:'white', display:'inline-flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap' }}
+            style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'11px 22px', background:'linear-gradient(135deg,#7A2E00,#C45500 50%,#FF7A00)', boxShadow:'0 4px 16px rgba(196,85,0,0.35)', color:'white', display:'inline-flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap' }}
             className="shrink-0 hover:shadow-[0_6px_22px_rgba(196,85,0,0.5)] transition-shadow duration-200">
             Get in touch <ArrowRight size={14} />
           </a>
@@ -85,7 +85,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-gray-100 dark:border-white/8">
-        <div className="max-w-[82rem] mx-auto px-6 lg:px-6 py-12 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12">
+        <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-6 py-10 sm:py-12 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 sm:gap-12">
 
           <div>
             <a href="#top" className="inline-block mb-5">
@@ -93,10 +93,10 @@ const Footer = () => {
             </a>
             <p style={{ ...SANS, fontSize:'14px', lineHeight:1.8, maxWidth:'380px', marginBottom:'16px' }}
               className="text-gray-500 dark:text-white/45">
-              Full-Stack Engineer building performant, production-grade web and mobile products. Based in Nigeria available worldwide.
+              Full-Stack Engineer building performant, production-grade web and mobile products. Based in Nigeria — available worldwide.
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 mb-6">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-6">
               <div style={{ ...SANS, fontSize:'11.5px', fontWeight:600, display:'inline-flex', alignItems:'center', gap:'6px', padding:'5px 12px', border:'1px solid' }}
                 className="border-gray-100 dark:border-white/10 text-gray-500 dark:text-white/35">
                 <MapPin size={11} className="text-[#1f6fb2]" /> Lekki Lagos State, Nigeria · Remote OK
@@ -126,7 +126,7 @@ const Footer = () => {
             <div className="space-y-1.5">
               {QUICK_ACTIONS.map(({ label, sub, href, ext, icon, cta }) => (
                 <a key={label} href={href} target={ext ? '_blank' : undefined} rel={ext ? 'noreferrer' : undefined}
-                  className={`_ft-action group w-full gap-3 px-4 py-3.5 border transition-all ${
+                  className={`_ft-action group w-full gap-3 px-3 sm:px-4 py-3 sm:py-3.5 border transition-all ${
                     cta
                       ? 'border-[#1f3a5f]/30 dark:border-[#1f6fb2]/25 bg-gradient-to-r from-[#eaf6ff] to-white dark:from-[#1f3a5f]/25 dark:to-transparent hover:border-[#1f6fb2] hover:from-[#dff0ff]'
                       : 'border-gray-100 dark:border-white/8 bg-white dark:bg-[#0d1f35] hover:border-[#1f6fb2]/40'
@@ -150,12 +150,12 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-gray-100 dark:border-white/8">
-        <div className="max-w-[82rem] mx-auto px-6 lg:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p style={{ ...SANS, fontSize:'12px' }} className="text-gray-400 dark:text-white/20">
+        <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
+          <p style={{ ...SANS, fontSize:'12px' }} className="text-gray-400 dark:text-white/20 text-center sm:text-left">
             © {new Date().getFullYear()} Elijah Alexander. All rights reserved.
           </p>
-          <p style={{ ...SANS, fontSize:'11.5px' }} className="text-gray-400 dark:text-white/20">
-            Built with React · ReactJS · JavaScript . Vite . EmailJS . TailwindCSS . and some of my Custom Codes
+          <p style={{ ...SANS, fontSize:'11.5px' }} className="text-gray-400 dark:text-white/20 text-center sm:text-right">
+            Built with React · Vite · EmailJS · TailwindCSS
           </p>
         </div>
       </div>

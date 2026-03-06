@@ -94,7 +94,7 @@ const Label = ({ children }) => (
 )
 
 const SectionHead = ({ num, title }) => (
-  <div className="px-5 py-3 border-b border-gray-100 dark:border-white/8">
+  <div className="px-4 sm:px-5 py-3 border-b border-gray-100 dark:border-white/8">
     <p style={{ ...SANS, fontSize:'9.5px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase' }}
       className="text-[#1f6fb2]">{num} — {title}</p>
   </div>
@@ -115,9 +115,7 @@ const Contact = () => {
       const t = document.createElement('style'); t.id = '__ct-css'; t.textContent = CSS
       document.head.appendChild(t)
     }
-
     emailjs.init(EJS_PUBLIC_KEY)
-
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) { setVis(true); obs.disconnect() } },
       { threshold:.08 }
@@ -134,7 +132,6 @@ const Contact = () => {
     e.preventDefault()
     setStatus('sending')
     setErrorMsg('')
-
     const templateParams = {
       from_name:     form.name,
       from_email:    form.email,
@@ -150,7 +147,6 @@ const Contact = () => {
       sent_at:       new Date().toLocaleString('en-NG', { timeZone: 'Africa/Lagos' }),
       reply_to:      form.email,
     }
-
     try {
       const result = await emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, templateParams, EJS_PUBLIC_KEY)
       if (result.status === 200) {
@@ -171,26 +167,26 @@ const Contact = () => {
     <section id="contact" ref={ref} className="w-full bg-white dark:bg-[#0a1628] scroll-mt-20">
 
       <div className="border-b border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35]">
-        <div className="max-w-[82rem] mx-auto px-6 lg:px-6 py-10 lg:py-12">
-          <div className={`flex flex-col lg:flex-row lg:items-end gap-6 ${an(1)}`}>
+        <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-6 py-8 sm:py-10 lg:py-12">
+          <div className={`flex flex-col lg:flex-row lg:items-end gap-5 lg:gap-6 ${an(1)}`}>
             <div className="flex-1">
               <div className="flex items-center gap-2.5 mb-3">
                 <span className="inline-block w-8 h-[2px]" style={{ background:'linear-gradient(90deg,#1f6fb2,#FF7A00)' }} />
                 <span style={{ ...SANS, fontSize:'11px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase', color:'#1f6fb2' }}>Get In Touch</span>
               </div>
-              <h2 style={{ ...SERIF, fontSize:'clamp(28px,4vw,44px)', lineHeight:1.1 }} className="text-[#1f3a5f] dark:text-white">
+              <h2 style={{ ...SERIF, fontSize:'clamp(26px,4vw,44px)', lineHeight:1.1 }} className="text-[#1f3a5f] dark:text-white">
                 Let's build something<br />
                 <em className="not-italic" style={{ background:'linear-gradient(135deg,#1f6fb2,#0ea5e9)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>together</em>
               </h2>
             </div>
             <p style={{ ...SANS, fontSize:'14px', lineHeight:1.75, maxWidth:'420px' }} className="text-gray-500 dark:text-white/50 lg:text-right">
-              Fill out the project brief below the more detail you share, the better I can scope and quote your project accurately.
+              Fill out the project brief below — the more detail you share, the better I can scope and quote your project accurately.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="max-w-[82rem] mx-auto px-6 lg:px-6 py-12 lg:py-16">
+      <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-6 py-10 sm:py-12 lg:py-16">
         <div className="grid lg:grid-cols-[1fr_360px] gap-10 lg:gap-14 items-start">
 
           <div className={an(2)}>
@@ -198,7 +194,7 @@ const Contact = () => {
 
               <div className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] mb-4">
                 <SectionHead num="01" title="Your Details" />
-                <div className="p-5 grid sm:grid-cols-2 gap-4">
+                <div className="p-4 sm:p-5 grid sm:grid-cols-2 gap-4">
                   <div>
                     <Label>Your Name *</Label>
                     <input required type="text" placeholder="John Smith" className="_ct-input" {...field('name')} />
@@ -220,7 +216,7 @@ const Contact = () => {
 
               <div className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] mb-4">
                 <SectionHead num="02" title="Project Brief" />
-                <div className="p-5 space-y-4">
+                <div className="p-4 sm:p-5 space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <Label>Project Type *</Label>
@@ -247,13 +243,13 @@ const Contact = () => {
               </div>
 
               <div className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] mb-4">
-                <div className="px-5 py-3 border-b border-gray-100 dark:border-white/8 flex items-center justify-between">
+                <div className="px-4 sm:px-5 py-3 border-b border-gray-100 dark:border-white/8 flex items-center justify-between">
                   <p style={{ ...SANS, fontSize:'9.5px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase' }} className="text-[#1f6fb2]">03 — Preferred Tech Stack</p>
                   <span style={{ ...SANS, fontSize:'10px', fontWeight:600 }} className="text-gray-400 dark:text-white/25">
                     {selectedTech.length > 0 ? `${selectedTech.length} selected` : 'Optional — select any'}
                   </span>
                 </div>
-                <div className="p-5 space-y-4">
+                <div className="p-4 sm:p-5 space-y-4">
                   {TECH_OPTIONS.map(({ group, items }) => (
                     <div key={group}>
                       <p style={{ ...SANS, fontSize:'8.5px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', marginBottom:'6px' }}
@@ -279,13 +275,13 @@ const Contact = () => {
 
               <div className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] mb-4">
                 <SectionHead num="04" title="Budget & Timeline" />
-                <div className="p-5 space-y-5">
+                <div className="p-4 sm:p-5 space-y-5">
                   <div>
                     <Label>Budget Range</Label>
                     <div className="flex flex-wrap gap-1.5">
                       {BUDGET_OPTIONS.map(b => (
                         <button key={b} type="button" onClick={() => setSelectedBudget(b)}
-                          style={{ minWidth:'90px' }} className={`_ct-budget-opt ${selectedBudget === b ? 'selected' : ''}`}>
+                          style={{ minWidth:'80px' }} className={`_ct-budget-opt ${selectedBudget === b ? 'selected' : ''}`}>
                           {b}
                         </button>
                       ))}
@@ -296,7 +292,7 @@ const Contact = () => {
                     <div className="flex flex-wrap gap-1.5">
                       {TIMELINE_OPTIONS.map(t => (
                         <button key={t} type="button" onClick={() => setSelectedTimeline(t)}
-                          style={{ minWidth:'90px' }} className={`_ct-budget-opt ${selectedTimeline === t ? 'selected' : ''}`}>
+                          style={{ minWidth:'80px' }} className={`_ct-budget-opt ${selectedTimeline === t ? 'selected' : ''}`}>
                           {t}
                         </button>
                       ))}
@@ -307,7 +303,7 @@ const Contact = () => {
 
               <div className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] mb-6">
                 <SectionHead num="05" title="Anything Else?" />
-                <div className="p-5">
+                <div className="p-4 sm:p-5">
                   <textarea rows={4} placeholder="Other details, questions, or context…"
                     className="_ct-input" style={{ resize:'vertical', minHeight:'100px' }} {...field('message')} />
                 </div>
@@ -327,9 +323,9 @@ const Contact = () => {
                 </div>
               )}
 
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 <button type="submit" disabled={status === 'sending'}
-                  style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'12px 32px', color:'white', background:'linear-gradient(135deg,#7A2E00,#C45500 50%,#FF7A00)', boxShadow:'0 4px 16px rgba(196,85,0,0.26)', display:'inline-flex', alignItems:'center', gap:'8px', opacity:status==='sending'?.7:1, cursor:status==='sending'?'not-allowed':'pointer' }}
+                  style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'12px 28px', color:'white', background:'linear-gradient(135deg,#7A2E00,#C45500 50%,#FF7A00)', boxShadow:'0 4px 16px rgba(196,85,0,0.26)', display:'inline-flex', alignItems:'center', gap:'8px', opacity:status==='sending'?.7:1, cursor:status==='sending'?'not-allowed':'pointer' }}
                   className="hover:shadow-[0_6px_22px_rgba(196,85,0,0.40)] transition-shadow">
                   {status === 'sending'
                     ? <><svg className="_ct-spinner" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Sending…</>
@@ -342,7 +338,7 @@ const Contact = () => {
 
           <div className={`space-y-4 ${an(3)}`}>
 
-            <div className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] p-5">
+            <div className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] p-4 sm:p-5">
               <p style={{ ...SANS, fontSize:'9.5px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase', marginBottom:'14px' }} className="text-gray-400 dark:text-white/30">Direct contact</p>
               <div className="space-y-4">
                 {INFO.map(({ icon, label, value, href }) => (
@@ -351,7 +347,7 @@ const Contact = () => {
                     <div>
                       <p style={{ ...SANS, fontSize:'9px', fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase' }} className="text-gray-400 dark:text-white/25 mb-0.5">{label}</p>
                       {href
-                        ? <a href={href} style={{ ...SANS, fontSize:'13px', fontWeight:500 }} className="text-[#1f3a5f] dark:text-white/80 hover:text-[#1f6fb2] transition-colors">{value}</a>
+                        ? <a href={href} style={{ ...SANS, fontSize:'13px', fontWeight:500 }} className="text-[#1f3a5f] dark:text-white/80 hover:text-[#1f6fb2] transition-colors break-all">{value}</a>
                         : <span style={{ ...SANS, fontSize:'13px', fontWeight:500 }} className="text-[#1f3a5f] dark:text-white/80">{value}</span>}
                     </div>
                   </div>
@@ -361,14 +357,14 @@ const Contact = () => {
 
             <div className="border border-gray-100 dark:border-white/8 bg-white dark:bg-[#0a1628] divide-y divide-gray-50 dark:divide-white/5">
               {[['Quote turnaround','< 24h'],['WhatsApp response','< 2h'],['Project kickoff','1-3 days'],['Engagement','Freelance & Full-time']].map(([l,v]) => (
-                <div key={l} className="flex items-center justify-between px-5 py-3">
+                <div key={l} className="flex items-center justify-between px-4 sm:px-5 py-3">
                   <span style={{ ...SANS, fontSize:'12px' }} className="text-gray-500 dark:text-white/40">{l}</span>
                   <span style={{ ...SANS, fontSize:'12px', fontWeight:700 }} className="text-[#1f3a5f] dark:text-white/80">{v}</span>
                 </div>
               ))}
             </div>
 
-            <div className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] p-5">
+            <div className="border border-gray-100 dark:border-white/8 bg-[#f9fafb] dark:bg-[#0d1f35] p-4 sm:p-5">
               <p style={{ ...SANS, fontSize:'9.5px', fontWeight:700, letterSpacing:'0.16em', textTransform:'uppercase', marginBottom:'12px' }} className="text-gray-400 dark:text-white/30">Quick connect</p>
               <div className="space-y-2">
                 <a href="https://wa.me/2349012688861" target="_blank" rel="noreferrer"

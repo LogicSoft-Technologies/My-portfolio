@@ -49,10 +49,10 @@ const PROJECTS = [
     img: work_2,
     title: 'Investment Broker Platform',
     type: 'Full-stack',
-    stack: 'ReactJS + TailwindCSS· NodeJS . PostgreSQL',
+    stack: 'ReactJS + TailwindCSS · NodeJS · PostgreSQL',
     year: '2025',
     desc: 'Investment platform frontend with real-time stock data, user authentication, portfolio management, and interactive charts.',
-    tags: ['React', 'PostgreSQL', 'prisma', 'Tailwind CSS', 'Coin Gheko Api', 'Express.js', 'JWT' ,'NodeJS'],
+    tags: ['React', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'CoinGecko API', 'Express.js', 'JWT', 'NodeJS'],
     live: 'https://innovationspacextrading.cloud/',
     github: 'https://github.com/LogicSoft-Technologies',
     featured: false,
@@ -107,14 +107,14 @@ const Work = () => {
     <section id="work" ref={ref} className="w-full bg-[#f9fafb] dark:bg-[#0d1f35] scroll-mt-20">
 
       <div className="border-b border-gray-100 dark:border-white/8 bg-white dark:bg-[#0a1628]">
-        <div className="max-w-[82rem] mx-auto px-6 lg:px-6 py-10 lg:py-12">
-          <div className={`flex flex-col lg:flex-row lg:items-end gap-6 ${an(1)}`}>
+        <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-6 py-8 sm:py-10 lg:py-12">
+          <div className={`flex flex-col lg:flex-row lg:items-end gap-5 lg:gap-6 ${an(1)}`}>
             <div className="flex-1">
               <div className="flex items-center gap-2.5 mb-3">
                 <span className="inline-block w-8 h-[2px]" style={{ background:'linear-gradient(90deg,#1f6fb2,#FF7A00)' }} />
                 <span style={{ ...SANS, fontSize:'11px', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase', color:'#1f6fb2' }}>My Portfolio</span>
               </div>
-              <h2 style={{ ...SERIF, fontSize:'clamp(28px,4vw,44px)', lineHeight:1.1 }} className="text-[#1f3a5f] dark:text-white">
+              <h2 style={{ ...SERIF, fontSize:'clamp(26px,4vw,44px)', lineHeight:1.1 }} className="text-[#1f3a5f] dark:text-white">
                 Projects I've <br />
                 <em className="not-italic" style={{ background:'linear-gradient(135deg,#1f6fb2,#0ea5e9)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>shipped</em>
               </h2>
@@ -133,9 +133,9 @@ const Work = () => {
         </div>
       </div>
 
-      <div className="max-w-[82rem] mx-auto px-6 lg:px-6 py-12 lg:py-16">
+      <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-6 py-10 sm:py-12 lg:py-16">
 
-        <div className={`flex items-center gap-3 mb-8 ${an(2)}`}>
+        <div className={`flex items-center gap-3 mb-6 sm:mb-8 ${an(2)}`}>
           <Filter size={13} className="text-gray-400 dark:text-white/25 shrink-0" />
           <div className="flex items-center gap-2 flex-wrap">
             {FILTERS.map(f => (
@@ -151,7 +151,7 @@ const Work = () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4">
           {filtered.map(({ img, title, type, stack, year, desc, tags, live, github, featured }, i) => (
             <div key={title}
               className={`_wk-card bg-white dark:bg-[#0a1628] border flex flex-col ${featured ? 'border-[#1f6fb2]/30 dark:border-[#1f6fb2]/25' : 'border-gray-100 dark:border-white/8'} ${an(i + 3)}`}>
@@ -180,7 +180,7 @@ const Work = () => {
                 </div>
               </div>
 
-              <div className="p-5 flex flex-col flex-1">
+              <div className="p-4 sm:p-5 flex flex-col flex-1">
                 <div className="flex items-center justify-between mb-2">
                   <span style={{ ...SANS, fontSize:'9px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'#1f6fb2' }}>{type} · {stack}</span>
                 </div>
@@ -212,13 +212,13 @@ const Work = () => {
           ))}
         </div>
 
-        <div className={`mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 border border-gray-100 dark:border-white/8 px-6 py-5 bg-white dark:bg-[#0a1628] ${an(6)}`}>
+        <div className={`mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border border-gray-100 dark:border-white/8 px-4 sm:px-6 py-5 bg-white dark:bg-[#0a1628] ${an(6)}`}>
           <div>
             <h4 style={{ ...SERIF, fontSize:'17px' }} className="text-[#1f3a5f] dark:text-white mb-0.5">More projects on GitHub</h4>
             <p style={{ ...SANS, fontSize:'13px' }} className="text-gray-500 dark:text-white/45">Browse repos, experiments, and open-source work.</p>
           </div>
           <a href="https://github.com/LogicSoft-Technologies" target="_blank" rel="noreferrer"
-            style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'10px 24px', display:'inline-flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap' }}
+            style={{ ...SANS, fontSize:'13px', fontWeight:700, letterSpacing:'0.02em', padding:'10px 20px', display:'inline-flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap' }}
             className="shrink-0 border border-[#1f3a5f] dark:border-white/20 text-[#1f3a5f] dark:text-white hover:border-[#1f6fb2] hover:text-[#1f6fb2] dark:hover:border-white/40 transition-colors">
             <Github size={14} /> View GitHub <ArrowRight size={13} />
           </a>

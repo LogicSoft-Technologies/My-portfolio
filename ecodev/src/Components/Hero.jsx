@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import profileImg from '../assets/profile-mg.png'
 import rightArrow from '../assets/right-arrow-white.png'
 import download from '../assets/download-icon.png'
-import resume from '../assets/my-resume.pdf'
+import resume from '../assets/elijah-resume.pdf'
 import hand from '../assets/hand-icon.png'
 
 const STATS = [

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import profileImg from '../assets/profile-mg.png'
+import profileImg from '../assets/elijah.png'
 import rightArrow from '../assets/right-arrow-white.png'
 import download from '../assets/download-icon.png'
 import resume from '../assets/elijah-resume.pdf'

@@ -2,11 +2,11 @@ import { useEffect } from 'react'
 import profileImg from '../assets/elijah.png'
 import rightArrow from '../assets/right-arrow-white.png'
 import download from '../assets/download-icon.png'
-import resume from '../assets/elijah-resume.pdf'
+import resume from '../assets/mycv.pdf'
 import hand from '../assets/hand-icon.png'
 
 const STATS = [
-  { value: '3+',    label: 'Years exp.'  },
+  { value: '4+',    label: 'Years exp.'  },
   { value: '20+',   label: 'Projects'    },
   { value: '2',     label: 'Platforms'   },
   { value: 'JS/TS', label: 'Core stack'  },

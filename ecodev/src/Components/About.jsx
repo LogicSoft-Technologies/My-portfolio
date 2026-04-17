@@ -59,7 +59,7 @@ const CARDS = [
 ]
 
 const STATS = [
-  { value:'3+',  label:'Years exp.'  },
+  { value:'4+',  label:'Years exp.'  },
   { value:'20+', label:'Projects'    },
   { value:'50+', label:'Tech tools'  },
   { value:'8',   label:'Domains'     },

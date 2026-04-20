@@ -83,9 +83,9 @@ const Hero = () => {
 
             <p className="_h-fade-up text-[14.5px] sm:text-[15.5px] text-gray-600 dark:text-white/55 leading-[1.8] max-w-[500px] mb-6 sm:mb-8"
               style={{ animationDelay: '190ms' }}>
-              3 years building web and mobile applications from pixel-precise frontends to
+              4 years building web and mobile applications from pixel-precise frontends to
               scalable Node.js backends. Full JavaScript / TypeScript stack, shipping products
-              that are fast, accessible, and production-ready.
+              that are fast, accessible, and production ready.
             </p>
 
             <div className="_h-fade-up flex flex-wrap gap-3 mb-7 sm:mb-10" style={{ animationDelay: '260ms' }}>

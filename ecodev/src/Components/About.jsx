@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { ArrowRight, ExternalLink, GraduationCap, Briefcase, Star } from 'lucide-react'
-import userImg from '../assets/user-img.png'
+import userImg from '../assets/elijah.jpg'
 import vscode  from '../assets/vscode.png'
 import firebase from '../assets/firebase.png'
 import mongo   from '../assets/mongodb.png'
